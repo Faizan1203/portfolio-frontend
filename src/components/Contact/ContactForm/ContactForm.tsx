@@ -1,10 +1,10 @@
-import { Alert, Button, Col, Container, Form, Row } from 'react-bootstrap';
-import './ContactForm.css';
-import { Controller, useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
+import "./ContactForm.css";
+import { Controller, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useState } from "react";
+import axios from "axios";
 
 interface ContactFormData {
   firstName: string;
@@ -18,17 +18,17 @@ const ContactForm = () => {
   const [emailSentSuccess, setEmailSentSuccess] = useState<boolean>(false);
   const [emailSentFail, setEmailSentFail] = useState<boolean>(false);
 
-  const requiredField: string = ' is a required field';
+  const requiredField: string = " is a required field";
   const schema = yup
     .object({
-      firstName: yup.string().required('First Name' + requiredField),
-      lastName: yup.string().required('Last Name' + requiredField),
+      firstName: yup.string().required("First Name" + requiredField),
+      lastName: yup.string().required("Last Name" + requiredField),
       email: yup
         .string()
         .email("Invalid Email")
-        .required('Email' + requiredField),
-      subject: yup.string().required('Subject' + requiredField),
-      message: yup.string().required('Message' + requiredField),
+        .required("Email" + requiredField),
+      subject: yup.string().required("Subject" + requiredField),
+      message: yup.string().required("Message" + requiredField),
     })
     .required();
 
@@ -39,35 +39,22 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<ContactFormData>({
     defaultValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      subject: '',
-      message: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      message: "",
     },
     resolver: yupResolver(schema),
   });
   const onSubmit = async (data: ContactFormData) => {
     console.log(data);
-
-    const emailData = {
-      from_name: data.firstName + ' ' + data.lastName,
-      from_email: data.email,
-      subject: data.subject,
-      message: data.message,
-    };
-
     try {
-      const response = await emailjs.send(
-        'service_8dprble',
-        'template_w16zjc4',
-        emailData,
-        '3OiaskrIZRs8LbkUg'
-      );
+      axios.post("http://localhost:8080/sendMail", data, {});
       setEmailSentSuccess(true);
-      console.log('Email sent successfully:', response);
+      console.log("Email sent successfully!");
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error sending email:", error);
       setEmailSentFail(true);
     }
     reset();
@@ -95,11 +82,10 @@ const ContactForm = () => {
             window.location.reload();
           }}
         >
-          Sorry for the inconveniece. Please try
-          again another time.
+          Sorry for the inconveniece. Please try again another time.
         </Alert>
       ) : (
-        ''
+        ""
       )}
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Container>
@@ -209,6 +195,6 @@ const ContactForm = () => {
       </Form>
     </>
   );
-}
+};
 
 export default ContactForm;
