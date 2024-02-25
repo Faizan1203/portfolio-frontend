@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
-import ContactForm from './ContactForm/ContactForm';
-import './ContactPage.css';
-import { Container } from 'react-bootstrap';
-import Loader from '../Loader/Loader';
-
-
+import { useEffect, useState } from "react";
+import ContactForm from "./ContactForm/ContactForm";
+import "./ContactPage.css";
+import { Container } from "react-bootstrap";
+import Loader from "../Loader/Loader";
 
 const Contact = () => {
   const [load, updateLoad] = useState(true);
@@ -27,7 +25,7 @@ const Contact = () => {
           friendly "hello". I'm committed to promptly responding to your
           messages.
         </p>
-        <ContactForm/>
+        <ContactForm />
         <span></span>
       </Container>
     </div>

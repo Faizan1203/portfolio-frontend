@@ -87,9 +87,7 @@ function Header() {
 
           <Button
             onClick={() => {
-              window.open(
-                "https://flowcv.com/resume/mp4eisdvjs"
-              );
+              window.open("https://flowcv.com/resume/mp4eisdvjs");
             }}
             className="resumebtn"
           >

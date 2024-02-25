@@ -1,11 +1,11 @@
-import { Container, Row, Col, Tooltip, OverlayTrigger } from 'react-bootstrap';
-import { AiFillGithub, AiFillYoutube } from 'react-icons/ai';
-import { FaLinkedinIn } from 'react-icons/fa';
-import './Home.css';
-import Typewriter from 'typewriter-effect';
-import { useEffect, useState } from 'react';
-import Loader from '../Loader/Loader';
-import Marquee from 'react-fast-marquee';
+import { Container, Row, Col, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { AiFillGithub, AiFillYoutube } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import "./Home.css";
+import Typewriter from "typewriter-effect";
+import { useEffect, useState } from "react";
+import Loader from "../Loader/Loader";
+import Marquee from "react-fast-marquee";
 
 function Home() {
   const [load, updateLoad] = useState(true);
@@ -18,29 +18,29 @@ function Home() {
     return () => clearTimeout(timer);
   }, []);
   const myRoles: string[] = [
-    'React Js Developer',
-    'Backend Developer',
-    'Front End Developer',
-    'Student',
+    "React Js Developer",
+    "Backend Developer",
+    "Front End Developer",
+    "Student",
   ];
 
   const welcomeTranslations = [
-    'Welcome',
-    'स्वागत है',
-    'مرحباً',
-    'Bienvenido',
-    'Bienvenue',
-    'Willkommen',
-    'Benvenuto',
-    'Bem-vindo',
-    'Welkom',
-    'Välkommen',
-    'Добро пожаловать',
-    '欢迎',
-    'ようこそ',
-    '환영합니다',
-    'Καλώς ήρθατε',
-    'ברוך הבא',
+    "Welcome",
+    "स्वागत है",
+    "مرحباً",
+    "Bienvenido",
+    "Bienvenue",
+    "Willkommen",
+    "Benvenuto",
+    "Bem-vindo",
+    "Welkom",
+    "Välkommen",
+    "Добро пожаловать",
+    "欢迎",
+    "ようこそ",
+    "환영합니다",
+    "Καλώς ήρθατε",
+    "ברוך הבא",
   ];
   return (
     <div className="homepagebackground">
@@ -63,9 +63,10 @@ function Home() {
                   </div>
                 ))}
               </Marquee>
-              
             </h2>
-            <h2 className="nametext">I'm Faizan Syed <span className="wave">👋 </span></h2>
+            <h2 className="nametext">
+              I'm Faizan Syed <span className="wave">👋 </span>
+            </h2>
             <span></span>
 
             <Typewriter
@@ -78,12 +79,12 @@ function Home() {
             />
 
             <OverlayTrigger
-              placement={'bottom'}
+              placement={"bottom"}
               overlay={<Tooltip>GitHub</Tooltip>}
             >
               <button
                 onClick={() => {
-                  window.open('https://github.com/Faizan1203');
+                  window.open("https://github.com/Faizan1203");
                 }}
                 className="socailmediabtn"
               >
@@ -92,12 +93,12 @@ function Home() {
             </OverlayTrigger>
 
             <OverlayTrigger
-              placement={'bottom'}
+              placement={"bottom"}
               overlay={<Tooltip>LinkedIn</Tooltip>}
             >
               <button
                 onClick={() => {
-                  window.open('https://linkedin.com/in/faizan-syed-8325941b5');
+                  window.open("https://linkedin.com/in/faizan-syed-8325941b5");
                 }}
                 className="socailmediabtn"
               >
@@ -105,13 +106,13 @@ function Home() {
               </button>
             </OverlayTrigger>
             <OverlayTrigger
-              placement={'bottom'}
+              placement={"bottom"}
               overlay={<Tooltip>YouTube</Tooltip>}
             >
               <button
                 onClick={() => {
                   window.open(
-                    'https://www.youtube.com/channel/UCOfAJ36-E-s6z6YFsc8DWDQ'
+                    "https://www.youtube.com/channel/UCOfAJ36-E-s6z6YFsc8DWDQ",
                   );
                 }}
                 className="socailmediabtn"

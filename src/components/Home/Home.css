@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   background-color: #4158d0;
-  background-image:  linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+  background-image: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
   .row {
     padding-top: 80px;
   }

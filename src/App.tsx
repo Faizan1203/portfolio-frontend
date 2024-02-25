@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './components/Home/Home';
-import Loader from './components/Loader/Loader';
-import Header from './components/Navbar/Navbar';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/ContactPage';
+import { useEffect, useState } from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home/Home";
+import Loader from "./components/Loader/Loader";
+import Header from "./components/Navbar/Navbar";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/ContactPage";
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -23,7 +23,7 @@ function App() {
     <div>
       <Router>
         <Loader load={load} />
-        <div id={load ? 'no-scroll' : 'scroll'}>
+        <div id={load ? "no-scroll" : "scroll"}>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

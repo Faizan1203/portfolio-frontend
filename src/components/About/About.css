@@ -1,83 +1,83 @@
 /* Aboutpage style */
 
 .aboutpagebackground {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #4158d0;
+  background-image: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+  padding-top: 110px;
+}
+
+.aboutmetext {
+  font-size: 2.4em !important;
+  color: #191919 !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+}
+.aboutmetext span:hover {
+  display: inline-block;
+  transition: all 500ms;
+  color: #fff;
+  animation: vibrate 30ms linear infinite forwards;
+}
+@keyframes vibrate {
+  0% {
+    transform: translateX(-1px) translateY(1px);
+  }
+  100% {
+    transform: translateX(1px) translateY(-2px);
+  }
+}
+.aboutdetails {
+  font-size: 1.1em !important;
+  text-align: justify;
+}
+.skilllist li {
+  letter-spacing: 1px;
+}
+.skilllist {
+  font-weight: 600;
+  list-style-type: none;
+}
+.skilllist li:hover {
+  transform: scale(1.05);
+  transition: 5ms;
+  color: #e8e8e8;
+}
+.webimage {
+  max-width: 500px;
+  height: 350px;
+  background-image: url(../../assets/web-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 767px) {
+  .aboutpagebackground {
     width: 100%;
     height: 100%;
-    min-height: 100vh;
-    background-color: #4158d0;
-    background-image: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
-    padding-top: 110px;
   }
-
-  .aboutmetext {
-    font-size: 2.4em !important;
-    color: #191919 !important;
-    font-weight: 600 !important;
-    letter-spacing: 1px !important;
+  .textbackground {
+    display: block !important;
+    margin: 0 auto !important;
   }
-  .aboutmetext span:hover {
-    display: inline-block;
-    transition: all 500ms;
-    color: #fff;
-    animation: vibrate 30ms linear infinite forwards;
-  }
-  @keyframes vibrate {
-    0% {
-      transform: translateX(-1px) translateY(1px);
-    }
-    100% {
-      transform: translateX(1px) translateY(-2px);
-    }
-  }
-  .aboutdetails {
-    font-size: 1.1em !important;
-    text-align: justify;
-  }
-  .skilllist li {
-    letter-spacing: 1px;
-  }
-  .skilllist {
-    font-weight: 600;
-    list-style-type: none;
-  }
-  .skilllist li:hover {
-    transform: scale(1.05);
-    transition: 5ms;
-    color: #e8e8e8;
-  }
-  .webimage {
-    max-width: 500px;
-    height: 350px;
-    background-image: url(../../assets/web-removebg-preview.png);
-    background-size: cover;
-    background-position: center;
-  }
-  @media (max-width: 767px) {
-    .aboutpagebackground {
-      width: 100%;
-      height: 100%;
-    }
-    .textbackground {
-      display: block !important;
-      margin: 0 auto !important;
-    }
-  }
+}
 
 /* skils style  */
-.skillsContainer{
-    margin-top: 50px;
-  }
-  .skill--box{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-    margin-left: 20px;
-  }
-  .skill-image{
-    width: 60px;
-    height: 50px;
-  }
+.skillsContainer {
+  margin-top: 50px;
+}
+.skill--box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 20px;
+}
+.skill-image {
+  width: 60px;
+  height: 50px;
+}

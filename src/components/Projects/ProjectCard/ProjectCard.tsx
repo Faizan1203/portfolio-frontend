@@ -1,6 +1,6 @@
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { Col, Row } from 'react-bootstrap';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { Col, Row } from "react-bootstrap";
 
 export interface ProjectProps {
   imgPath: string;
@@ -16,13 +16,13 @@ function ProjectCard(project: ProjectProps) {
       <Card.Img variant="top" src={project.imgPath} alt="card-img" />
       <Card.Body
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
         }}
       >
         <Card.Title>{project.title}</Card.Title>
-        <Card.Text style={{ textAlign: 'justify' }}>
+        <Card.Text style={{ textAlign: "justify" }}>
           {project.description}
         </Card.Text>
         <Row>
@@ -50,7 +50,7 @@ function ProjectCard(project: ProjectProps) {
               </Button>
             </Col>
           ) : (
-            ''
+            ""
           )}
         </Row>
       </Card.Body>
