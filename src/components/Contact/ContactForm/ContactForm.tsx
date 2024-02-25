@@ -50,7 +50,7 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormData) => {
     console.log(data);
     try {
-      axios.post(`${import.meta.env.VITE_API_BASE_PATH}/sendMail`, data, {});
+      await axios.post(`${import.meta.env.VITE_API_BASE_PATH}/sendMail`, data, {});
       setEmailSentSuccess(true);
       console.log("Email sent successfully!");
     } catch (error) {

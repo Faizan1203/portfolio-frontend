@@ -1,5 +1,9 @@
 # set the base image to create the image for react app
-FROM node:20-alpine
+ARG NODE_VERSION=18.17.1
+FROM node:${NODE_VERSION}-alpine
+
+# Use production node environment by default.
+ENV NODE_ENV production
 
 # create a user with permissions to run the app
 # -S -> create a system user
