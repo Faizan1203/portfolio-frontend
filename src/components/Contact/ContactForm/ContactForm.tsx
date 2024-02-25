@@ -53,7 +53,7 @@ const ContactForm = () => {
       await axios.post(
         `${import.meta.env.VITE_API_BASE_PATH}/sendMail`,
         data,
-        {},
+        {}
       );
       setEmailSentSuccess(true);
       console.log("Email sent successfully!");
