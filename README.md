@@ -43,7 +43,7 @@ npm install
 
 
 
-**Note:** This Readme assumes you have already set up the backend API and have configured email settings in `application.properties`. For more details visit [this](https://github.com/Faizan1203/portfolio-backend) section
+**Note:** This Readme assumes you have already set up the backend API and have configured email settings in `application.properties`. For more details visit [this](https://github.com/Faizan1203/portfolio-frontend?tab=readme-ov-file#backend-api-integration) section
 
 ### Development
 
