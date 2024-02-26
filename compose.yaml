@@ -3,7 +3,7 @@ services:
   # define the application container/service
   # we can use any name for the service. Here it is `web`
   # we can create multiple services as well
-  web:
+  portfolio-frontend:
     # specify the image to build the container from
     # this can be any image available in docker hub or a custom one or the one we want to build
     build:
